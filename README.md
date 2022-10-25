@@ -1,2 +1,2 @@
-# Learning_AI-and_Machine-Learning
+# SQL(Structured Query Language) Learning
 still updating

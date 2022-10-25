@@ -1,0 +1,13 @@
+x mean table name
+
+DESCRIBE x; 
+ - DESCRIBE or DESC(both are same) command to describe the structure of a table
+
+ DROP x;
+  - remove or drop the table
+
+  ALTER TABLE x ADD _something_ _Type_;
+  - will add a column to a table with name "-something_" with type "_Type_"
+
+  ALTER TABLE x DROP COLUMN "_something_";
+  - this will remove or drop a column of the name "_something_"

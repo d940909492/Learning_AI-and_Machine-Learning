@@ -1,0 +1,10 @@
+INT
+DECIMAL(M, N)  //M is digit before decimal place , N is digit after decimal place
+VARCHAR(L)   //L mean length of a string
+BLOG
+DATE
+TIMESTAMP
+CHAR()
+....
+
+all data type link: https://www.w3schools.com/sql/sql_datatypes.asp

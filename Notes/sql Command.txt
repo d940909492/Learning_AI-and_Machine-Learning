@@ -3,11 +3,24 @@ x mean table name
 DESCRIBE x; 
  - DESCRIBE or DESC(both are same) command to describe the structure of a table
 
- DROP x;
+ DROP TABLE x;
   - remove or drop the table
 
   ALTER TABLE x ADD _something_ _Type_;
-  - will add a column to a table with name "-something_" with type "_Type_"
+  - will add a column to a table with name "_something_" with type "_Type_"
 
   ALTER TABLE x DROP COLUMN "_something_";
   - this will remove or drop a column of the name "_something_"
+
+  SELECT * FROM _Table_Name_
+  - print or output the _Table_Name_ table , (_Table_Name_ is the name of the table)
+
+AUTO_INCREMENT
+- Auto-increment allows a unique number to be generated automatically when a new record is inserted into a table.
+Often this is the primary key field that we would like to be created automatically every time a new record is inserted.
+
+NOT NULL
+set the key cant not equal to null
+
+UNIQUE
+set the key cant have repeate name

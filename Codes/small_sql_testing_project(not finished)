@@ -1,0 +1,52 @@
+-- RESET THE LAB......WARNING!!!!! ONLY IF OUT OF CONTROL
+DROP TABLE lab,experiment_area,report;
+
+CREATE TABLE lab(
+Subject_id INT UNIQUE,
+Full_name VARCHAR(40),
+Gender VARCHAR(6),
+Subject_describe VARCHAR(200),
+Testing_date DATE,
+Related_subject_id INT,
+Area_number INT,
+Been_revived_times INT,
+PRIMARY KEY(subject_id)
+);
+
+CREATE TABLE experiment_area(
+Area_number INT PRIMARY KEY,
+Area_City_Name VARCHAR(20),
+Subject_id_In_The_Area INT,
+Regional_head_id INT,
+Experiment_Date DATE,
+FOREIGN KEY(Subject_id_In_The_Area) REFERENCES lab(Subject_id) ON DELETE SET NULL
+);
+
+ALTER TABLE lab
+ADD FOREIGN KEY(Area_number)
+REFERENCES experiment_area(Area_number)
+ON DELETE SET NULL;
+
+ALTER TABLE lab
+ADD FOREIGN KEY(Related_subject_id)
+REFERENCES lab(Subject_id)
+ON DELETE SET NULL;
+
+
+CREATE TABLE report(
+Report_number INT,
+Result VARCHAR(200),
+Subject_id INT,
+FOREIGN KEY(Subject_id) REFERENCES lab(Subject_id) ON DELETE SET NULL
+);
+
+-----START TESTING-----
+INSERT INTO lab VALUES(101, 'XvKun Cai', 'Male', "A trainee who has practiced for two years, love to sing, dance, rap and basketball; also like to attack others with attorney's letter", '2022-10-27',NULL, NULL, 99);
+INSERT INTO experiment_area VALUES(1, 'HuNan, China' , 101 , 01, '2022-10-27');
+
+
+UPDATE lab
+SET Area_Number = 1
+WHERE Subject_id = 101;
+
+SELECT * FROM lab;

@@ -7,12 +7,12 @@ CREATE TABLE games_list (
 );
 
 -- use to insert a column
-INSERT INTO games_list VALUES(1 , 'Halo' , 'first person shooting');
-INSERT INTO games_list VALUES(2 , 'For Honor' , 'third person action');
-INSERT INTO games_list(list_number, game_name , game_type) VALUES(3 , 'Red Dead Redemption 2' , 'third person shooting');
-INSERT INT`O games_list VALUES(4 , 'The Witcher 3: Wild Hunt' , 'Action role-playing');
-INSERT INTO games_list VALUES(5 , 'Divinity: Original Sin II' , 'Turn-Base Role-Playing');
-INSERT INTO games_list VALUES(6 , 'The Elder Scrolls V: Skyrim' , 'Action role-playing');
+INSERT INTO games_list VALUES(1, 'Halo' , 'first person shooting');
+INSERT INTO games_list VALUES(2, 'For Honor' , 'third person action');
+INSERT INTO games_list(game_name , game_type) VALUES('Red Dead Redemption 2' , 'third person shooting');
+INSERT INTO games_list(game_name , game_type) VALUES('The Witcher 3: Wild Hunt' , 'Action role-playing');
+INSERT INTO games_list(game_name , game_type) VALUES('Divinity: Original Sin II' , 'Turn-Base Role-Playing');
+INSERT INTO games_list(game_name , game_type) VALUES('The Elder Scrolls V: Skyrim' , 'Action role-playing');
 
 -- Use to Describe the table
 DESCRIBE games_list;
@@ -25,4 +25,21 @@ ALTER TABLE games_list ADD game_rate DECIMAL(5,2);
 -- Use to drop one column
 ALTER TABLE games_list DROP COLUMN game_rate;
 
+-- delete the table
 DROP TABLE games_list;
+
+-- "UPDATE" is use to Update one of row , "SET" is use to set one of column to another name, and use "WHERE" to set the target
+UPDATE games_list
+SET game_type = "Third person Role-playing"
+WHERE game_type = "third person shooting";
+
+UPDATE games_list
+SET game_type = "First Person Shooting"
+WHERE list_number = "1";
+
+INSERT INTO games_list(game_name , game_type) VALUES('test case','test case');
+
+-- DELETE FROM games_list;  - this would delete all the row in the table
+DELETE FROM games_list
+WHERE list_number = 7;
+--WHERE game_name = 'test case';  - this also work

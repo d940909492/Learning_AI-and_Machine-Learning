@@ -24,3 +24,12 @@ set the key cant not equal to null
 
 UNIQUE
 set the key cant have repeate name
+
+UPDATE , SET , WHERE , OR
+- "UPDATE" is use to Update one of row , 
+- "SET" is use to set one of column to another name, 
+- and use "WHERE" to set the target
+- "OR" is another statement
+
+<> , = , > , >= , <= , AND , OR
+- operator of sql, <> mean not equal

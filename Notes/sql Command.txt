@@ -33,3 +33,26 @@ UPDATE , SET , WHERE , OR
 
 <> , = , > , >= , <= , AND , OR
 - operator of sql, <> mean not equal
+
+"AS" keyword would change the column differently
+
+"DISTINCT" keyword would find display all unique or different name, which wont display repeate name
+
+COUNT() keyword would return or find how many item in the cloumn.
+The AVG() function returns the average value of a numeric column.
+The SUM() function returns the total sum of a numeric column. 
+
+The GROUP BY statement groups rows that have the same values into summary rows, like "find the number of customers in each country"
+
+--A wildcard character is used to substitute one or more characters in a string.
+--Wildcard characters are used with the LIKE operator. 
+--The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.
+-- %, mean any number characters, _, mean one character
+
+LIKE Operator	Description
+WHERE CustomerName LIKE 'a%'	Finds any values that starts with "a"
+WHERE CustomerName LIKE '%a'	Finds any values that ends with "a"
+WHERE CustomerName LIKE '%or%'	Finds any values that have "or" in any position
+WHERE CustomerName LIKE '_r%'	Finds any values that have "r" in the second position
+WHERE CustomerName LIKE 'a__%'	Finds any values that starts with "a" and are at least 3 characters in length
+WHERE ContactName LIKE 'a%o'	Finds any values that starts with "a" and ends with "o"

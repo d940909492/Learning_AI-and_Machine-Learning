@@ -48,3 +48,12 @@ WHERE game_name IN ('Halo');
 SELECT game_name
 FROM games_list
 WHERE game_type IN ('First Person Shooting');
+
+-- for testing
+SELECT * FROM games_list;
+
+-- "AS" keyword would change the column differently
+SELECT game_name AS name , game_type AS type FROM games_list;
+
+-- "DISTINCT" keyword would find display all unique or different name, which wont display repeate name
+SELECT DISTINCT game_type FROM games_list;

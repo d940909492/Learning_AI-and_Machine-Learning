@@ -1,2 +1,4 @@
 # SQL(Structured Query Language) Learning
-still updating
+
+[Code Here](https://github.com/d940909492/SQL-learning/tree/main/Codes)
+[Note Here](https://github.com/d940909492/SQL-learning/tree/main/Notes)
